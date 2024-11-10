@@ -15,7 +15,7 @@ cookies = sign.login(cookie_dir_path=cookie_path_dir, save_cookies=True)
 # Create the ChatBot
 chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
 
-@app.route('/', methods=['POST'])
+@app.route('/subtasks', methods=['POST'])
 @cross_origin()
 def chat():
     data = request.json
