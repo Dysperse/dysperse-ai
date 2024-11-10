@@ -30,7 +30,7 @@ def chat():
         message_result = chatbot.chat(f"You are an AI which will split this task into smaller, manageable subtasks which are relevant to achieve the task.\n" 
                                     f"You will provide data in a minified JSON format only, without any surrouding or extra text.\n" 
                                     f"You must follow this schema: [ {{ \"title\": \"...\", \"description\": \"...\" }} ] \n" 
-                                    f"Do not create more than 5 subtasks. Keep titles and descriptions to the point. If a description is not necessary or repetitive, omit it. \n" 
+                                    f"Do not create more than 5 subtasks. Keep titles and descriptions to the point. Keep the description to 1 short sentence. \n" 
                                     f"Do not use extra whitespace. {user_message}")
         message_str = message_result.wait_until_done()
 
