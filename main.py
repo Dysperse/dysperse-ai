@@ -4,12 +4,12 @@ from hugchat.login import Login
 import os
 from flask_cors import cross_origin
 from flask_cors import CORS
+from dotenv import load_dotenv
+from pathlib import Path
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-from dotenv import load_dotenv
-from pathlib import Path
 
 dotenv_path = Path('.env')
 load_dotenv(dotenv_path=dotenv_path)
